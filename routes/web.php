@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*
 Route::get('/sobre-nosotros', function () {
 	return "Esta es la pagina que habla sobre nosotros";
 });
@@ -29,4 +29,15 @@ Route::get('/foro', function () {
 
 Route::get('/post/{id}/{nombre}', function ($id, $nombre) {
     return "Este es el post n° " . $id . ", creada por: " . $nombre;
-})->where('nombre', '[a-z]+');
+})->where('nombre', '[a-z]+');*/
+
+//Route::get('/inicio/{id}', "EjemploController@inicio");
+/*
+Route::get('/inicio', "PaginasController@inicio");
+Route::get('/quienesSomos', "PaginasController@quienesSomos");
+Route::get('/dondeEstamos', "PaginasController@dondeEstamos");
+Route::get('/foro', "PaginasController@foro");
+*/
+
+Route::get('/posts/create', "Ejemplo3Controller@create");
+Route::get('posts/{id}/edit', "Ejemplo3Controller@edit({id})");
